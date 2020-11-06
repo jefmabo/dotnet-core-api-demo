@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Pets.Model;
+using Pets.Repository.Configuration;
 
 namespace Pets.Repository
 {
@@ -9,6 +10,11 @@ namespace Pets.Repository
         {
         }
 
-        public DbSet<Product> Products { get; set; }        
+        public DbSet<Product> Products { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfiguration(new ProductConfiguration());
+        }
     }
 }
