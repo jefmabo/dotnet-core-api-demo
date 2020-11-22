@@ -205,7 +205,7 @@ public class ProductService : IProductService
 
 A classe será responsável por permitir a comunicação entre os controllers e os repositories.
 
-Para essa comunicação iremos criar uma propriedade do tipo `IProductRepository` e no construtor passamos também um objeto deste mesmo tipo. Você não precisará se preocupar com instâncias destes objetos pois elas serão gerenciadas pelo próprio netCore se configurado conforme item [4.1](##4.1.-Injeção-de-dependência).
+Para essa comunicação iremos criar uma propriedade do tipo `IProductRepository` e no construtor passamos também um objeto deste mesmo tipo. Você não precisará se preocupar com instâncias destes objetos pois elas serão gerenciadas pelo próprio netCore se configurado conforme item [4.1](#4.1.-Injeção-de-dependência).
 
 ## 7. Criando projeto Pets.Repository
 No repository é onde iremos criar as classes que farão comunicação com o banco de dados.
