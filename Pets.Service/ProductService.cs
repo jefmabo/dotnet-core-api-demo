@@ -16,6 +16,5 @@ namespace Pets.Service
 
         public IList<Product> GetAll() => productRepository.GetAll();
         
-
     }
 }

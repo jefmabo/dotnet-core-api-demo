@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/Pets.Api/bin/Debug/netcoreapp3.1/Pets.Api.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Pets.Api",
+            "cwd": "${workspaceFolder}/Pets.Api/bin/Debug/netcoreapp3.1/",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
