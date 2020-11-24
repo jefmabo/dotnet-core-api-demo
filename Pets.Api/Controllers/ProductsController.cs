@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pets.Repository;
 using Pets.Model;
+using Pets.Service.Interface;
 
 namespace ContosoPets.Api.Controllers
 {
@@ -12,16 +13,15 @@ namespace ContosoPets.Api.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
-        private readonly Context _context;
+        private readonly IProductService productService;
 
-        public ProductsController(Context context)
+        public ProductsController(IProductService productService)
         {
-            _context = context;
+            this.productService = productService;
         }
 
         [HttpGet]
-        public ActionResult<List<Product>> GetAll() =>
-            _context.Products.ToList();
+        public IList<Product> GetAll() => productService.GetAll();
 
     }
 }
